@@ -1,0 +1,2 @@
+User1 Logged In
+User2 Logged Out
