@@ -1,0 +1,46 @@
+# Problem 16: Shape Hierarchy with Polymorphism
+# Scenario: Shape area and perimeter calculation
+# Task: Override area() and perimeter()
+
+import math
+
+class Shape:
+
+    def area(self):
+        return 0
+
+    def perimeter(self):
+        return 0
+
+
+class Rectangle(Shape):
+
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+    def perimeter(self):
+        return 2 * (self.length + self.width)
+
+
+class Circle(Shape):
+
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return round(math.pi * self.radius * self.radius, 2)
+
+    def perimeter(self):
+        return round(2 * math.pi * self.radius, 2)
+
+
+# Creating objects
+shapes = [Rectangle(10, 5), Circle(7)]
+
+# Printing areas
+for s in shapes:
+    print(s.area())
